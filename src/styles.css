@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #0b0b0f;
+  --color-surface: #16161f;
+  --color-card: #1c1c28;
+  --color-fg: #f6ede6;
+  --color-muted: #b8b4c8;
+  --color-primary: #ff7a2e;
+  --color-primary-soft: #ff9a5c;
+  --color-aqua: #2dd4c8;
+  --color-aqua-dim: #149e95;
+  --color-line: #2a2a3a;
+  --color-ink: #0b0b0f;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 1.25rem;
+  --radius-md: 0.85rem;
+  --radius-sm: 0.5rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow: hidden;
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise-left {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise-right {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes glowpulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.deck-enter {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.deck-enter-left {
+  animation: rise-left 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.deck-enter-right {
+  animation: rise-right 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.stagger > * {
+  animation: rise 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.stagger > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.stagger > *:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.stagger > *:nth-child(3) {
+  animation-delay: 0.19s;
+}
+.stagger > *:nth-child(4) {
+  animation-delay: 0.26s;
+}
+.stagger > *:nth-child(5) {
+  animation-delay: 0.33s;
+}
+.stagger > *:nth-child(6) {
+  animation-delay: 0.4s;
+}
+.stagger > *:nth-child(7) {
+  animation-delay: 0.47s;
+}
+.stagger > *:nth-child(8) {
+  animation-delay: 0.54s;
+}
+.stagger > *:nth-child(9) {
+  animation-delay: 0.61s;
+}
+
+.cover-zoom {
+  animation: kenburns 18s ease-in-out alternate infinite;
+}
+
+.glow {
+  animation: glowpulse 4.5s ease-in-out infinite;
+}
+
+.progress-fill {
+  transform-origin: left center;
+  animation: bar 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deck-enter,
+  .deck-enter-left,
+  .deck-enter-right,
+  .stagger > *,
+  .cover-zoom,
+  .glow,
+  .progress-fill {
+    animation: none !important;
+  }
+}

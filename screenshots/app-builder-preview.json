@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Seu Site com IA",
+      "hasCanvas": false,
+      "bodyTextLen": 258,
+      "bodyTextHash": "5bc28fd67de37dd1c80167eedd1069cadc7cd6610f6b2ce0d278027d96681bf0",
+      "bodyTextPrefix": "AULA PRÁTICA Seu site com IA Da estrutura certa à publicação pro",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Seu Site com IA",
+      "hasCanvas": false,
+      "bodyTextLen": 219,
+      "bodyTextHash": "a85b8b878f59a501a62ac844accbab2d4b5019123a62761f7f5a000beca79cfd",
+      "bodyTextPrefix": "AULA PRÁTICA Seu site com IA Da estrutura certa à publicação pro",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
